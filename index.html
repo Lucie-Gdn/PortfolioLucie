@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MyPortefolio</title>
+</head>
+<body>
+    <header class="header" id="header" onscroll="shade()">
+        <a href="#opening">Lucie G.</a>
+        <ul>
+            <li class="onglet" data-nav="aboutMe"><a href="#aboutMe">About me</a></li>
+            <li class="onglet" data-nav="myWork"><a href="#myWork">My work</a></li>
+            <li class="onglet" data-nav="contact"><a href="#contact">Get in touch !</a></li>
+        </ul>
+    </header>
+
+    <div class="opening section" id="opening">
+        <div class="opening_text"> 
+        <h1>Hello I'm Lucie! </h1>
+        <p>Welcome to my portfolio! I recently decided to become a developer. Scroll down to see how I'm doing 😊</p>
+            
+        </div>
+        <img id="girl_working_gif" src="./images/working.gif" alt="girl _working">
+    </div>
+
+    <div class="aboutMe section" id="aboutMe">
+        <img id="photo_profil" src="./images/photo_profil.jpeg" alt="photo_profil">
+        <div class="presentation"> 
+            <h2>About Me</h2>
+            <p>This is the paragraph where I talk about me</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel suscipit facere qui impedit quasi? Alias, accusantium natus explicabo error beatae dolor voluptatum?</p>
+            <p>Get to know me more : </p>
+            <div class="socials">
+                <a target="_blank" title="Github" href="https://github.com/Lucie-Gdn"><img src="./images/github.png" /></a>
+                <a target="_blank" title="LinkedIn" href="https://www.linkedin.com/in/lucie-gendron-151793139/"><img src="./images/linkedin.png" /></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="myWork presentation section" id="myWork">
+        <h2>My work</h2>
+        <p>Here are some examples of projects I enjoyed doing :</p>
+        <div id="projects">
+            <div class="project 1">
+                <h3>Project 1 : Wishlist, a browser extension </h3>
+                <img src="./images/wishlist.JPG" alt="preview wishlist"/>
+                <h4>My Wishlist</h4>
+                <h5>CSS - JS - HTML</h5>
+                <p>A browser extension to finally be able to answer the question : "what do you want for christmas this year ?" </p>
+                <a target="_blank" href="">View Project</a>
+            </div>
+            <div class="project 2">
+                <h3>Project 2 : Porshe, a replica of a mock-up website </h3>
+                <img src="./images/porschescreen.JPG" alt="preview fake website porsche" />
+                <h4>Porsche</h4>
+                <h5>CSS - JS - HTML</h5>
+                <p>Mock-up website on Udemy - Pair programming - Training in css and animations</p>
+                <a target="_blank" href="https://idyllic-horse-38f3ff.netlify.app/">View Project</a>
+            </div>
+            <div class="project 3">Project 3</div>
+        </div>
+    </div>
+
+    <div class="contact section" id="contact" >
+        <div class="presentation" >
+            <h3>Need a few more info ? </h3>
+            <p>Reach out to me through this form !</p>
+            <form id="form" action="">
+                <input type="text" placeholder="Your name" required>
+                <input type="text" placeholder="Your email" required>
+                <input type="text" placeholder="Your message" required>
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>

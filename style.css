@@ -1,0 +1,251 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,100&display=swap');
+
+* { margin: 0; padding: 0; }
+
+body{
+    background-color: #F0E7EE;
+    font-family: 'Poppins', sans-serif;
+    color : #493D5F;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* @media screen and (max-width : 950px) {
+
+
+.header{
+    display: none;
+}
+
+
+} */
+
+/* MENU - HEADER  */
+
+.header{
+    background-color: #F0E7EE;
+    /* border: black solid 1px; */
+    position : sticky; /* position fixed ? */
+    top:0;
+    margin-top: 10px ;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-size: cover;
+}
+
+
+header ul{
+    display : flex;
+    list-style-type:none;
+    margin : 8px;
+}
+
+header a{
+    padding : 15px;
+    text-decoration: none;
+    color : #493D5F;
+}
+
+.onglet {
+    padding : 15px;
+    margin-right : 100px;
+    border-radius: 4px;
+    text-decoration: none;
+    position :relative;
+}
+.onglet a{
+    text-decoration: none;
+    color : #493D5F;
+}
+.onglet::before{
+    content: "";
+    width : 100%;
+    height: 3px;
+    background-color: #FF5218;
+    position : absolute;
+    bottom : 5px;
+    left:-2px;
+    transform: scaleX(0);
+    transition: 0.5s;
+}
+
+.onglet:hover::before, 
+.onglet.active::before{
+    transform: scaleX(1)
+}
+
+.onglet a:hover{
+    transition: 0.3s;
+    color:#FF5218
+}
+header a:hover{
+    transition: 0.3s;
+    color:#FF5218
+}
+
+/*  OPENING  */
+
+.opening{
+    color : #493D5F;
+    display:flex;
+    /* border : solid black 1px; */
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin-top : 80px;
+    margin-bottom: 100px;
+    min-width: 780px;
+}
+
+.opening_text{
+    /* border: black solid 1px; */
+    padding : 50px;
+    max-width : 500px;
+    min-width: 85px;
+    line-height: 25px;
+}
+.opening h1{
+    font-size: 40px;
+}
+
+.opening_text p{
+    padding-top : 20px
+}
+
+.socials a{
+    margin:10px 10px 10px 0px;
+}
+.socials img{
+    width: 6%;
+    padding-top: 10px;
+}
+
+#girl_working_gif{
+    width : 350px;
+    border-radius: 4px;
+}
+
+/*  ABOUT ME  */
+
+.aboutMe{
+    border: solid black 1px;
+    padding : 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 25px;
+}
+.aboutMe h2{
+    line-height: 90px;
+}
+.aboutMe .presentation{
+    max-width: 500px;
+}
+
+#photo_profil{
+    width : 250px;
+    border-radius: 4px;
+}
+
+.presentation{
+   padding : 70px;
+}
+
+/*  MY WORK  */
+
+.myWork{
+    padding : 100px 0px 0px 0px ;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 2px dotted black;
+    align-items: center;
+    margin: 0;
+}
+
+#projects{
+    height: 100%;
+    width: 100%;
+    border : solid black 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.project{
+    height: 80%;
+    width : 25%;
+    /* border: #493D5F solid 1px; */
+    margin : 18px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.project img{
+    width: 100%;
+    border-radius: 25px;
+}
+
+.project:hover{
+    box-shadow: #c5bed2 0px 6px 24px 0px, #c5bed2 0px 0px 0px 1px;
+    transform: translateY(-5px);
+    transition:all ease-in-out 0.3s;
+    
+}
+
+.project a{
+    justify-content: center;
+}
+
+/* CONTACT */
+
+#contact{
+    padding-top : 50px;
+    border:solid black  1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#form{
+    border: solid black 1px;
+    display : flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin : 20px;
+    
+}
+
+#form input[type=submit]{
+    cursor: pointer;
+    margin : 15px;
+    padding : 10px;
+    border-radius: 4px;
+    border : none;
+    color: white;
+    background-color: #493D5F;
+    font-family: 'Poppins', sans-serif;
+}
+#form input[type=submit]:hover{
+    background-color: #FF5218;
+    border-radius: 4px;
+    box-shadow: #493D5F 0px 2px 4px 0px;
+    color: white;
+    border: none;
+}
+#form input[type=text]{
+    padding: 10px;
+    margin :15px;
+    width : 400px;
+    font-family: 'Poppins', sans-serif;
+}
+#form input[placeholder="Your message"]{
+    height: 80px;
+
+}
+
