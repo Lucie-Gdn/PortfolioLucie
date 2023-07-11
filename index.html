@@ -27,7 +27,7 @@
     </div>
 
     <div class="aboutMe section" id="aboutMe">
-        <img id="photo_profil" src="./images/photo_profil.jpeg" alt="photo_profil">
+        <img id="photo_profil" src="./images/Portraits_ADA_by_BenoitBillard-21_WEB.jpg" alt="photo_profil">
         <div class="presentation"> 
             <h2>About Me</h2>
             <p>This is the paragraph where I talk about me</p>
@@ -50,33 +50,56 @@
                 <h4>My Wishlist</h4>
                 <h5>CSS - JS - HTML</h5>
                 <p>A browser extension to finally be able to answer the question : "what do you want for christmas this year ?" </p>
-                <a target="_blank" href="">View Project</a>
+                <a target="_blank" href="https://github.com/Lucie-Gdn/Wishlist.git">View Project</a>
             </div>
             <div class="project 2">
-                <h3>Project 2 : Porshe, a replica of a mock-up website </h3>
+                <h3>Project 2 : Vintage, website for second-hand furnitures </h3>
+                <img src="./images/vintage.JPG" alt="signup page Vintage project" />
+                <h4>Vintage</h4>
+                <h5>REACT - Node JS - SQL - EXPRESS - TAILWIND </h5>
+                <p>Online shop that sells second-hand furniture. Front and Back project</p>
+                <a target="_blank" href="https://github.com/Lucie-Gdn/vente-de-meubles-vintage_project.git">View Project</a>
+            </div>
+            <div class="project 3">
+                <h3>Project 3 : a new way to plan Boardgame night! </h3>
+                <img src="./images/porschescreen.JPG" alt="preview of a social network for boardgames" />
+                <h4>Social Network - Jeux en Folie</h4>
+                <h5>PHP - SQL </h5>
+                <p>Social Network created for a group project. Build a game catalog and discuss gamenight with some friends.</p>
+                <a target="_blank" href="https://github.com/Lucie-Gdn/reseau-social-php-jeuxSociete.git">View Project</a>
+            </div>
+            <div class="project 4">
+                <h3>The Donut : really just a donut floating around</h3>
+                <img src="./images/thedonut.JPG" alt="preview of a donut website in 3D" />
+                <h4>The Donut</h4>
+                <h5>THREE JS - CSS - HTML</h5>
+                <p>Training in ThreeJS, work in progress of a donut creation</p>
+                <a target="_blank" href="">View Project</a>
+            </div>
+            <div class="project 5">
+                <h3>Project 5 : Porshe, a replica of a mock-up website </h3>
                 <img src="./images/porschescreen.JPG" alt="preview fake website porsche" />
                 <h4>Porsche</h4>
                 <h5>CSS - JS - HTML</h5>
                 <p>Mock-up website on Udemy - Pair programming - Training in css and animations</p>
                 <a target="_blank" href="https://idyllic-horse-38f3ff.netlify.app/">View Project</a>
             </div>
-            <div class="project 3">Project 3</div>
         </div>
     </div>
 
     <div class="contact section" id="contact" >
         <div class="presentation" >
-            <h3>Need a few more info ? </h3>
-            <p>Reach out to me through this form !</p>
-            <form id="form" action="">
-                <input type="text" placeholder="Your name" required>
-                <input type="text" placeholder="Your email" required>
-                <input type="text" placeholder="Your message" required>
-                <input type="submit" value="Send">
+            <form id="form" onsubmit="sendEmail(); reset(); return false;" >
+                <h3>Need a few more info ? </h3>
+                <p>Reach out to me through this form !</p>
+                <input type="text" id="name" placeholder="Your name" required>
+                <input type="text" id="email" placeholder="Your email" required>
+                <textarea name="message" id="message" cols="14" rows="10" placeholder="Your message"></textarea>
+                <input type="submit" id="sendForm" value="Send">
             </form>
         </div>
     </div>
-
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 <script src="script.js"></script>
 </html>

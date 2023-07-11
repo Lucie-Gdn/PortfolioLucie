@@ -80,7 +80,7 @@ header a{
 
 .onglet a:hover{
     transition: 0.3s;
-    color:#FF5218
+    color:#CC2705
 }
 header a:hover{
     transition: 0.3s;
@@ -132,7 +132,7 @@ header a:hover{
 /*  ABOUT ME  */
 
 .aboutMe{
-    border: solid black 1px;
+    /* border: solid black 1px; */
     padding : 50px;
     display: flex;
     justify-content: center;
@@ -147,7 +147,7 @@ header a:hover{
 }
 
 #photo_profil{
-    width : 250px;
+    width : 350px;
     border-radius: 4px;
 }
 
@@ -162,49 +162,59 @@ header a:hover{
     display: flex;
     flex-direction: column;
     width: 100%;
-    border: 2px dotted black;
+    /* border: 2px dotted black; */
     align-items: center;
     margin: 0;
 }
 
 #projects{
+    flex-wrap: wrap;
     height: 100%;
     width: 100%;
-    border : solid black 1px;
+    /* border : solid black 1px; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .project{
-    height: 80%;
+    height: 70vh;
     width : 25%;
+    max-width: 35vw;
     /* border: #493D5F solid 1px; */
     margin : 18px;
     padding: 10px;
     border-radius: 10px;
+    line-height: 25px;
 }
 
 .project img{
-    width: 100%;
+    object-fit:cover;
+    /* width: 50vh; */
+    width: 50vh;
+    height: 30vh;
     border-radius: 25px;
 }
 
 .project:hover{
-    box-shadow: #c5bed2 0px 6px 24px 0px, #c5bed2 0px 0px 0px 1px;
+    box-shadow:  #c5bed2 0px 0px 0px 1px;
     transform: translateY(-5px);
     transition:all ease-in-out 0.3s;
-    
+    /* #c5bed2 0px 6px 24px 0px, */
 }
 
 .project a{
     justify-content: center;
 }
+.project h3{
+    padding-bottom: 10%;
+}
+
 
 /* CONTACT */
 
 #contact{
     padding-top : 50px;
-    border:solid black  1px;
+    /* border:solid black  1px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,7 +222,7 @@ header a:hover{
 }
 
 #form{
-    border: solid black 1px;
+    /* border: solid black 1px; */
     display : flex;
     justify-content: center;
     text-align: center;
@@ -238,7 +248,7 @@ header a:hover{
     color: white;
     border: none;
 }
-#form input[type=text]{
+#form input[type=text], #message{
     padding: 10px;
     margin :15px;
     width : 400px;

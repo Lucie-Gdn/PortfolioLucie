@@ -35,3 +35,16 @@ sections.forEach( section => {
     });
 
 
+function sendEmail(){
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "lucie.gendron.brun@gmail.com",
+        Password : "CE3E54EB846E393DCE8528D1A79BC815B614",
+        To : 'lucie.gendron.brun@gmail.com',
+        From : document.getElementById('email').value,
+        Subject : "Contact from Portfolio",
+        Body : document.getElementById('message').value
+    }).then(
+      message => alert("Message sent successfully !")
+    );
+}
