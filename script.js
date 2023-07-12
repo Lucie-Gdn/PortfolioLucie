@@ -2,7 +2,7 @@
 window.addEventListener("scroll", shade);
 
 function shade() {
-    if (window.scrollY>10){
+    if (window.scrollY>50){
     let header =document.getElementById('header');
     header.style.boxShadow = "#493d5f77 0px 1px 3px";
     } else {

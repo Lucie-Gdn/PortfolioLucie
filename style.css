@@ -7,6 +7,7 @@ body{
     background-color: #F0E7EE;
     font-family: 'Poppins', sans-serif;
     color : #493D5F;
+    padding: 0;
 }
 html{
     scroll-behavior: smooth;
@@ -28,23 +29,24 @@ html{
 .header{
     background-color: #F0E7EE;
     /* border: black solid 1px; */
-    position : sticky; /* position fixed ? */
+    position : fixed;
     top:0;
-    margin-top: 10px ;
+    width : 100%;
     display:flex;
     justify-content: space-between;
     align-items: center;
     background-size: cover;
+    z-index :2;
 }
 
 
-header ul{
+.header ul{
     display : flex;
     list-style-type:none;
     margin : 8px;
 }
 
-header a{
+.header a{
     padding : 15px;
     text-decoration: none;
     color : #493D5F;
@@ -96,7 +98,7 @@ header a:hover{
     justify-content: center;
     align-items: center;
     padding: 30px;
-    margin-top : 80px;
+    margin-top : 150px;
     margin-bottom: 100px;
     min-width: 780px;
 }
@@ -176,7 +178,10 @@ header a:hover{
     align-items: center;
     justify-content: center;
 }
+
 .project{
+    overflow: hidden;
+    background-color: #F0E7EE;
     height: 70vh;
     width : 25%;
     max-width: 35vw;
@@ -185,6 +190,7 @@ header a:hover{
     padding: 10px;
     border-radius: 10px;
     line-height: 25px;
+    z-index: 1;
 }
 
 .project img{
