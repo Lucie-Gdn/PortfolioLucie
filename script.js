@@ -35,16 +35,3 @@ sections.forEach( section => {
     });
 
 
-function sendEmail(){
-    Email.send({
-        Host : process.env.HOST,
-        Username : process.env.USERNAME,
-        Password : process.env.PASSWORD,
-        To : process.env.TO,
-        From : document.getElementById('email').value,
-        Subject : "Contact from Portfolio",
-        Body : document.getElementById('message').value
-    }).then(
-      message => alert("Message sent successfully !")
-    );
-}

@@ -19,9 +19,8 @@
 
     <div class="opening section" id="opening">
         <div class="opening_text"> 
-        <h1>Hello I'm Lucie! </h1>
-        <p>Welcome to my portfolio! I recently decided to become a developer. Scroll down to see how I'm doing 😊</p>
-            
+            <h1>Hello I'm Lucie! </h1>
+            <p>Welcome to my portfolio! I recently decided to become a developer. Scroll down to see how I'm doing 😊</p>  
         </div>
         <img id="girl_working_gif" src="./images/working.gif" alt="girl _working">
     </div>
@@ -88,18 +87,16 @@
     </div>
 
     <div class="contact section" id="contact" >
-        <div class="presentation" >
-            <form id="form" onsubmit="sendEmail(); reset(); return false;" >
-                <h3>Need a few more info ? </h3>
-                <p>Reach out to me through this form !</p>
-                <input type="text" id="name" placeholder="Your name" required>
-                <input type="text" id="email" placeholder="Your email" required>
-                <textarea name="message" id="message" cols="14" rows="10" placeholder="Your message"></textarea>
-                <input type="submit" id="sendForm" value="Send">
-            </form>
-        </div>
+        <form id="form" action="https://formspree.io/f/mgejerkg" method="POST">
+            <h3>Need a few more info ? </h3>
+            <p>Reach out to me through this form !</p>
+            <input type="text" id="name" placeholder="Your name" required>
+            <input type="email" name="email" id="email" placeholder="Your email" required>
+            <textarea name="message" id="message" cols="14" rows="10" placeholder="Your message"></textarea>
+            <button type="submit" id="sendForm"> Send </button>
+        </form>
     </div>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
+
 </body>
 <script src="script.js"></script>
 </html>

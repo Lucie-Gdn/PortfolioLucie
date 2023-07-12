@@ -231,7 +231,7 @@ header a:hover{
     
 }
 
-#form input[type=submit]{
+#form #sendForm{
     cursor: pointer;
     margin : 15px;
     padding : 10px;
@@ -241,14 +241,14 @@ header a:hover{
     background-color: #493D5F;
     font-family: 'Poppins', sans-serif;
 }
-#form input[type=submit]:hover{
+#form #sendForm:hover{
     background-color: #FF5218;
     border-radius: 4px;
     box-shadow: #493D5F 0px 2px 4px 0px;
     color: white;
     border: none;
 }
-#form input[type=text], #message{
+#form #name, #email, #message{
     padding: 10px;
     margin :15px;
     width : 400px;
