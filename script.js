@@ -40,7 +40,9 @@ sections.forEach( section => {
     // SVG Animation //
 
 let path = document.querySelector('path')
+console.log("path : ",path)
 let pathLength = path.getTotalLength()
+console.log("pathLength : ",pathLength)
 
 path.style.strokeDasharray = pathLength 
 path.style.strokeDashoffset = pathLength
@@ -60,19 +62,21 @@ window.addEventListener('scroll', () => {
 // SVG Portrait
 function drawPortrait(){
 
-let pathPortrait = document.getElementById('#pathPortrait')
-let pathPortraitLength = pathPortrait.getTotalLength()
+let pathPortrait = document.querySelector('.portrait_dos svg path')
+console.log("pathPortrait : ",pathPortrait)
 
-pathPortrait.style.strokeDasharray = pathPortraitLength + ' ' + pathPortraitLength
+let pathPortraitLength = pathPortrait.getTotalLength()
+console.log("pathPortraitlength : ", pathPortraitLength) 
+
+pathPortrait.style.strokeDasharray = pathPortraitLength 
 pathPortrait.style.strokeDashoffset = pathPortraitLength
 
-let scrollPercentageP = (document.documentElement.scrollTop + document.body.scrollTop)/(document.documentElement.scrollHeight - document.documentElement.clientHeight)
+// let scrollPercentageP = (document.documentElement.scrollTop + document.body.scrollTop)/(document.documentElement.scrollHeight - document.documentElement.clientHeight)
     
     // Avancée du trait 
-    let drawLength = pathPortraitLength * scrollPercentageP + 280
+    // A FAIRE : transformer le 2 en variable de compteur qui avance 
+    let drawLengthP = pathPortraitLength * 2  + 280
     //dessin envers au scroll up
-    pathPortrait.style.strokeDashoffset = pathPortraitLength - drawLength
-
-
+    pathPortrait.style.strokeDashoffset = pathPortraitLength - drawLengthP
 }
 drawPortrait()
