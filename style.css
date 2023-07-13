@@ -131,6 +131,27 @@ header a:hover{
     border-radius: 4px;
 }
 
+/* SVG ANIMATION  */
+.line-container{
+    position : fixed;
+    top : 0;
+    left : 0;
+    width: 10%;
+    height: 100%;
+    text-align: start;
+    overflow: hidden;
+    /* z-index: 1; */
+}
+svg{
+    display: inline-block;
+    height: 100%;
+}
+
+.portrait_dos{
+    width : 300px;
+}
+
+
 /*  ABOUT ME  */
 
 .aboutMe{
@@ -177,6 +198,7 @@ header a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .project{
@@ -191,6 +213,9 @@ header a:hover{
     border-radius: 10px;
     line-height: 25px;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .project img{
@@ -199,6 +224,7 @@ header a:hover{
     width: 50vh;
     height: 30vh;
     border-radius: 25px;
+    margin-bottom: 6px;
 }
 
 .project:hover{
@@ -208,11 +234,12 @@ header a:hover{
     /* #c5bed2 0px 6px 24px 0px, */
 }
 
-.project a{
-    justify-content: center;
+.project p{
+    text-align: start;
 }
 .project h3{
     padding-bottom: 10%;
+    text-align: start;
 }
 
 
@@ -225,6 +252,7 @@ header a:hover{
     justify-content: center;
     align-items: center;
     text-align: center;
+    z-index: 2;
 }
 
 #form{

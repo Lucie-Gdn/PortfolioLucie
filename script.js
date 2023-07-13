@@ -35,3 +35,44 @@ sections.forEach( section => {
     });
 
 
+
+
+    // SVG Animation //
+
+let path = document.querySelector('path')
+let pathLength = path.getTotalLength()
+
+path.style.strokeDasharray = pathLength 
+path.style.strokeDashoffset = pathLength
+
+window.addEventListener('scroll', () => {
+    // At what percentage of scroll are we ?
+    let scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop)/(document.documentElement.scrollHeight - document.documentElement.clientHeight)
+    // console.log("% scroll : ", scrollPercentage)
+    
+    // Avancée du trait 
+    let drawLength = pathLength * scrollPercentage + 280
+    //dessin envers au scroll up
+    path.style.strokeDashoffset = pathLength - drawLength
+})
+
+
+// SVG Portrait
+function drawPortrait(){
+
+let pathPortrait = document.getElementById('#pathPortrait')
+let pathPortraitLength = pathPortrait.getTotalLength()
+
+pathPortrait.style.strokeDasharray = pathPortraitLength + ' ' + pathPortraitLength
+pathPortrait.style.strokeDashoffset = pathPortraitLength
+
+let scrollPercentageP = (document.documentElement.scrollTop + document.body.scrollTop)/(document.documentElement.scrollHeight - document.documentElement.clientHeight)
+    
+    // Avancée du trait 
+    let drawLength = pathPortraitLength * scrollPercentageP + 280
+    //dessin envers au scroll up
+    pathPortrait.style.strokeDashoffset = pathPortraitLength - drawLength
+
+
+}
+drawPortrait()
