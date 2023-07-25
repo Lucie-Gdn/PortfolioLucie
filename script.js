@@ -79,4 +79,4 @@ pathPortrait.style.strokeDashoffset = pathPortraitLength
     //dessin envers au scroll up
     pathPortrait.style.strokeDashoffset = pathPortraitLength - drawLengthP
 }
-drawPortrait()
+// drawPortrait()
