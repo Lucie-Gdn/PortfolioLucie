@@ -80,3 +80,12 @@ pathPortrait.style.strokeDashoffset = pathPortraitLength
     pathPortrait.style.strokeDashoffset = pathPortraitLength - drawLengthP
 }
 // drawPortrait()
+
+const myTitle = new SplitType('#my-title')
+
+gsap.to('.char',{
+    y:0,
+    stagger:0.05, // to offset the depart
+    delay :0.2,
+    duration :0.1
+})
