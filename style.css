@@ -124,8 +124,8 @@ header a:hover{
     top : 50%;
     left: 50%;
     transform : translate(-50%,-50%);
-    
 }
+
 
 .opening_text{
     /* border: black solid 1px; */
@@ -226,7 +226,7 @@ svg{
     top:50vh;
     left : 0;
     background: linear-gradient(180deg, #FF5218 0%, #F0E7EE 100%);
-    /* clip-path: circle(0px at var(--coordinateX) var(--coordinateY) ); */
+    clip-path: circle(0px at var(--coordinateX) var(--coordinateY) );
     z-index: 1;
 }
 
