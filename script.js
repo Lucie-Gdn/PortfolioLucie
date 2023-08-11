@@ -82,10 +82,43 @@ pathPortrait.style.strokeDashoffset = pathPortraitLength
 // drawPortrait()
 
 const myTitle = new SplitType('#my-title')
-
+// ANIMATION WELCOME MESSAGE
 gsap.to('.char',{
     y:0,
     stagger:0.05, // to offset the depart
     delay :0.2,
     duration :0.1
 })
+
+// ANIMATION ON SCROLL NEW BACKGROUND
+
+let work_title = document.getElementById('work_title') 
+let innertext = document.getElementById('innertext')
+window.addEventListener('scroll', function(){
+    // if( work_title.style.height<"100vh"){
+        // console.log("height of work title : ", work_title.style.height);
+        let value =window.scrollY
+    work_title.style.clipPath="circle("+ value+"px at center center)"
+    innertext.style.left= 100 - value/5 + '%';
+    innertext.style.top= 100 - value/10 + '%';
+    // } else{
+    //     work_title.style.backgroundImage='none';
+    // }
+    console.log("innertext.style.top", innertext.style.top)
+})
+
+
+
+// une fois que au scroll le background arrive à 100vh alors on reprends la div projets et on fixe le titre en haut de la page 
+let root=document.querySelector(':root');
+let portrait = document.getElementById('portrait')
+window.addEventListener('scroll', function(){
+    let coordinates = portrait.getBoundingClientRect()
+console.log("coordinate y : ", coordinates.y, "coordinate x : ", coordinates.x)
+let valueYScroll =window.scrollY
+let topcoord = coordinates.y + valueYScroll
+var root = document.querySelector(':root');
+root.style.setProperty('--coordinateY',topcoord)
+// root.style.setProperty('--coordinateX', leftcoord)
+})
+

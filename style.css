@@ -4,7 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,300&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
 * { margin: 0; padding: 0; }
-
+:root{
+    --coordinateX:0;
+    --coordinateY:0;
+}
 body{
     background-color: #F0E7EE;
     /* font-family: 'Poppins', sans-serif; */
@@ -46,7 +49,7 @@ html{
     justify-content: space-between;
     align-items: center;
     background-size: cover;
-    z-index :2;
+    z-index :3;
 }
 
 .header ul{
@@ -101,7 +104,8 @@ header a:hover{
 
 /*  OPENING  */
 
-.opening{
+/* opening = section ? */
+.opening{ 
     color : #493D5F;
     display:flex;
     /* border : solid black 1px; */
@@ -111,18 +115,27 @@ header a:hover{
     /* margin-top : 80px;
     margin-bottom: 0px;
     min-width: 780px; */
+    /* position: fixed; */
     height: 100vh;
+    /* clip-path: circle(200px at center center);
+    background-image: url(./images/background_open.svg); */
 }
+
+
+
 
 .opening_text{
     /* border: black solid 1px; */
-    padding : 50px;
-    max-width : 350px;
-    min-width: 85px;
+    padding-right : 50px;
+    max-width : 80%;
+    /* min-width: 50%; */
     line-height: 35px;
+
+
 }
 .opening h1{
-    font-size: 2.5rem;
+    font-size: 4rem;
+    line-height: 3.5rem;
     font-weight: 400;
     text-transform: uppercase;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -171,6 +184,7 @@ svg{
 
 .portrait{
     width : 500px;
+    z-index:2;
 }
 
 
@@ -201,15 +215,64 @@ svg{
 }
 
 /*  MY WORK  */
+/* ANIMATION REVEAL WORK */
+
+#work_title{
+    position: fixed;
+    width : 100%;
+    height:80vh;
+    top:0;
+    left : 0;
+    background-image: url(./images/background_open.svg);
+    display :flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(0px at var(--coordinateX) var(--coordinateY) );
+    z-index: 1;
+}
+.opening{
+    position : absolute;
+    top : 50%;
+    left: 50%;
+    transform : translate(-50%,-50%);
+}
+.innertext{
+    position : fixed;
+    top:50%;
+    left: 100%;
+    transform :translateY(-50%);
+    white-space: nowrap;
+    z-index: 1;
+    font-size: 10vw;
+    color : white;
+    font-weight: 700;
+    text-align :center;
+    width : 100%;
+}
+.container{
+    position : relative;
+    margin-top: 200vh;
+    /* background-image: url(./images/background_open.svg); */
+}
+
 
 .myWork{
-    padding : 100px 0px 0px 0px ;
+    padding : 10px;
     display: flex;
     flex-direction: column;
     width: 100%;
     /* border: 2px dotted black; */
-    align-items: center;
-    margin: 0;
+    /* align-items: center; */
+    /* margin: 0; */
+}
+.myWork h2{
+    font-size: 7rem;
+    text-align: start;
+    font-weight: 400;
+}
+.subtitle{
+    font-size: 2rem;
+    font-weight: 400;
 }
 
 #projects{
@@ -263,6 +326,9 @@ svg{
     padding-bottom: 10%;
     text-align: start;
 }
+
+
+
 
 
 /* CONTACT */
