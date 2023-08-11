@@ -16,7 +16,7 @@ body{
     font-family: 'Open Sans', sans-serif;
     color : #493D5F;
     padding: 0;
-    transition: background-color 1s ease;
+   
 }
 html{
     scroll-behavior: smooth;
@@ -120,8 +120,12 @@ header a:hover{
     height: 100vh;
     /* clip-path: circle(200px at center center);
     background-image: url(./images/background_open.svg); */
+    position : absolute;
+    top : 50%;
+    left: 50%;
+    transform : translate(-50%,-50%);
+    
 }
-
 
 .opening_text{
     /* border: black solid 1px; */
@@ -218,24 +222,14 @@ svg{
 
 #work_title{
     position: relative;
-    width : 100%;
     height:100vh;
     top:50vh;
     left : 0;
-    /* background-image: url(./images/background_open.svg); */
     background: linear-gradient(180deg, #FF5218 0%, #F0E7EE 100%);
-    display :flex;
-    justify-content: center;
-    align-items: center;
-    clip-path: circle(0px at var(--coordinateX) var(--coordinateY) );
+    /* clip-path: circle(0px at var(--coordinateX) var(--coordinateY) ); */
     z-index: 1;
 }
-.opening{
-    position : absolute;
-    top : 50%;
-    left: 50%;
-    transform : translate(-50%,-50%);
-}
+
 .innertext{
     position : fixed;
     top:50%;
@@ -248,11 +242,13 @@ svg{
     font-weight: 700;
     text-align :center;
     width : 100%;
+    font-size: 10rem;
+    text-align: start;
+    font-weight: 600;
 }
 .container{
     position : relative;
     margin-top: 100vh;
-    /* background-image: url(./images/background_open.svg); */
 }
 
 
@@ -260,19 +256,15 @@ svg{
     padding : 10px;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    /* border: 2px dotted black; */
-    /* align-items: center; */
-    /* margin: 0; */
+    /* width: 100%; */
+
 }
-.myWork h2{
-    font-size: 7rem;
-    text-align: start;
-    font-weight: 400;
-}
+
 .subtitle{
-    font-size: 2rem;
-    font-weight: 400;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+    z-index : 1
 }
 
 #projects{
@@ -434,10 +426,6 @@ svg{
     flex-direction: column;
     }
     
-    /* #myWork{
-        padding :10%;
-       
-    } */
     
 
     .project img{

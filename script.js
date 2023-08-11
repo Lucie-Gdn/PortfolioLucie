@@ -90,21 +90,27 @@ gsap.to('.char',{
     duration :0.1
 })
 
-// ANIMATION ON SCROLL NEW BACKGROUND
+// ANIMATION ON SCROLL NEW BACKGROUND GRADIENT
 
 let work_title = document.getElementById('work_title') 
 let innertext = document.getElementById('innertext')
 window.addEventListener('scroll', function(){
-    // if( work_title.style.height<"100vh"){
-        // console.log("height of work title : ", work_title.style.height);
-        let value =window.scrollY
-    work_title.style.clipPath="circle("+ value+"px at center center)"
-    innertext.style.left= 100 - value/5 + '%';
-    innertext.style.top= 100 - value/10 + '%';
-    // } else{
-    //     work_title.style.backgroundImage='none';
-    // }
-    console.log("innertext.style.top", innertext.style.top)
+    
+        
+        let value = window.scrollY
+        work_title.style.clipPath="circle("+ value+"px at center center)"
+        let valueLeft = 100 - value/5;
+        let valueTop = 100 - value/10
+        
+       
+        console.log("innertext.style.top", valueTop)
+        if( valueTop>20){
+           innertext.style.left= valueLeft + '%';
+        innertext.style.top=  valueTop + '%';
+        } else {
+         innertext.style.position = "fixed";   
+        }
+        
 })
 
 
