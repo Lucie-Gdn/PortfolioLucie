@@ -114,8 +114,8 @@ header a:hover{
     align-items: center;
     padding: 30px;
     /* margin-top : 80px;
-    margin-bottom: 0px;
-    min-width: 780px; */
+    margin-bottom: 0px; */
+    min-width: 780px;
     /* position: fixed; */
     height: 100vh;
     /* clip-path: circle(200px at center center);
@@ -128,11 +128,11 @@ header a:hover{
 
 
 .opening_text{
-    /* border: black solid 1px; */
-    padding-right : 50px;
-    max-width : 100%;
+    /* padding-right : 50px; */
+    width : 100%;
     min-width: 50%;
     line-height: 35px;
+    /* border : 1px solid black; */
 }
 
 .opening h1{
@@ -145,7 +145,7 @@ header a:hover{
 }
 
 .opening_text p{
-    padding-top : 20px
+    padding-top : 20px;
 }
 
 .socials a{
@@ -225,8 +225,6 @@ svg{
     height:100vh;
     top:50vh;
     left : 0;
-    background: linear-gradient(180deg, #FF5218 0%, #F0E7EE 100%);
-    clip-path: circle(0px at var(--coordinateX) var(--coordinateY) );
     z-index: 1;
 }
 
@@ -237,7 +235,6 @@ svg{
     transform :translateY(-50%);
     white-space: nowrap;
     z-index: 1;
-    font-size: 10vw;
     color : white;
     font-weight: 700;
     text-align :center;
@@ -256,8 +253,6 @@ svg{
     padding : 10px;
     display: flex;
     flex-direction: column;
-    /* width: 100%; */
-
 }
 
 .subtitle{
@@ -297,7 +292,6 @@ svg{
 
 .project img{
     object-fit:cover;
-    /* width: 50vh; */
     width: 50vh;
     height: 30vh;
     border-radius: 25px;
@@ -308,7 +302,6 @@ svg{
     box-shadow:  #c5bed2 0px 0px 0px 1px;
     transform: translateY(-5px);
     transition:all ease-in-out 0.3s;
-    /* #c5bed2 0px 6px 24px 0px, */
 }
 
 .project p{
@@ -318,9 +311,6 @@ svg{
     padding-bottom: 10%;
     text-align: start;
 }
-
-
-
 
 
 /* CONTACT */
