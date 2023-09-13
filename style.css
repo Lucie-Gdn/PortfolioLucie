@@ -239,13 +239,12 @@ svg{
     font-weight: 700;
     text-align :center;
     width : 100%;
-    font-size: 10rem;
-    text-align: start;
-    font-weight: 600;
+    font-size: 10rem;    
 }
 .container{
     position : relative;
     margin-top: 100vh;
+    margin-bottom: 20vh;
 }
 
 
@@ -263,14 +262,13 @@ svg{
 }
 
 #projects{
-    flex-wrap: wrap;
     height: 100%;
     width: 100%;
     /* border : solid black 1px; */
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    flex-direction: column;
 }
 
 .project{
@@ -288,6 +286,11 @@ svg{
     display: flex;
     align-items: center;
     flex-direction: column;
+    transform: translateX(-100%);
+    transition: all 1s ease-in-out;
+}
+.project.show-animate{
+    transform: translateX(0);
 }
 
 .project img{

@@ -41,9 +41,9 @@ sections.forEach((section) => {
 // SVG Animation //
 
 let path = document.querySelector("path");
-console.log("path : ", path);
+// console.log("path : ", path);
 let pathLength = path.getTotalLength();
-console.log("pathLength : ", pathLength);
+// console.log("pathLength : ", pathLength);
 
 path.style.strokeDasharray = pathLength;
 path.style.strokeDashoffset = pathLength;
@@ -102,9 +102,10 @@ window.addEventListener("scroll", function () {
   work_title.style.clipPath = "circle(" + value + "px at center center)";
   let valueLeft = 100 - value / 5;
   let valueTop = 100 - value / 8;
-  work_title.style.background="linear-gradient(180deg, #FF5218 50%, #F0E7EE 100%)";
+  work_title.style.background =
+    "linear-gradient(180deg, #FF5218 50%, #F0E7EE 100%)";
 
-  console.log("innertext.style.top", valueTop);
+  //   console.log("innertext.style.top", valueTop);
   if (valueTop > 20) {
     innertext.style.left = valueLeft + "%";
     innertext.style.top = valueTop + "%";
@@ -118,15 +119,32 @@ let root = document.querySelector(":root");
 let portrait = document.getElementById("portrait");
 window.addEventListener("scroll", function () {
   let coordinates = portrait.getBoundingClientRect();
-  console.log(
-    "coordinate y : ",
-    coordinates.y,
-    "coordinate x : ",
-    coordinates.x
-  );
+  //   console.log(
+  //     "coordinate y : ",
+  //     coordinates.y,
+  //     "coordinate x : ",
+  //     coordinates.x
+  //   );
   let valueYScroll = window.scrollY;
   let topcoord = coordinates.y + valueYScroll;
   var root = document.querySelector(":root");
   root.style.setProperty("--coordinateY", topcoord);
   // root.style.setProperty('--coordinateX', leftcoord)
 });
+
+// ANIMATION PROJECT CARD
+
+const projects = document.querySelectorAll("section");
+window.onscroll = () => {
+  projects.forEach((project) => {
+    let top = window.scrollY;
+    let offset = project.offsetTop - 100;
+    let height = project.offsetHeight;
+    console.log("top", top, "offset", offset, "height", height);
+    if (top >= offset && top < offset + height) {
+      project.classList.add("show-animate");
+    } else {
+      project.classList.remove("show-animate");
+    }
+  });
+};
