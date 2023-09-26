@@ -476,7 +476,7 @@ svg{
 
     .opening{
         flex-direction: column;
-        min-width: 50%;
+        min-width: 80%;
     }
     
     .opening h1{
@@ -490,35 +490,45 @@ svg{
         margin-bottom: 50px;
     }
     
-    .portrait{
-        max-width: 60%;
+    .callAction{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
     }
-
+    #work_title{
+        display: none;
+    }
+   
     #myWork{
         max-width: 100%;
         width: fit-content;
         align-items: start;
     }
-    
+   .container{
+    margin-bottom: 20px;
+   }
     #projects{
         width: fit-content;
     }
+
     .project{
         width :fit-content;
         height: 75%;
         max-width: 100%;
-    /* border: #493D5F solid 1px; */
-    margin : 18px;
-    padding: 10px;
-    border-radius: 10px;
-    line-height: 25px;
-    z-index: 1;
-    display: flex;
-    align-items: start;
-    flex-direction: column;
+        margin : 18px;
+        padding: 10px;
+        line-height: 25px;
+        z-index: 1;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
     }
     
-    
+    .socials a img{
+        width : 40px
+    }
 
     .project img{
         display: none;
@@ -527,6 +537,7 @@ svg{
     #photo_profil{
         display:none
     }
+
     .presentation{
         padding : 0;
     }
