@@ -87,7 +87,7 @@ const myTitle = new SplitType("#my-title");
 
 // ANIMATION WELCOME MESSAGE
 gsap.to(".char", {
-  y: 0,
+  y: -5,
   stagger: 0.05, // to offset the depart
   delay: 0.2,
   duration: 0.1,
@@ -105,46 +105,64 @@ window.addEventListener("scroll", function () {
   work_title.style.background =
     "linear-gradient(180deg, #FF5218 50%, #F0E7EE 100%)";
 
-  //   console.log("innertext.style.top", valueTop);
+  console.log("innertext.style.top", valueTop);
+  console.log("VALUE", value);
   if (valueTop > 20) {
     innertext.style.left = valueLeft + "%";
     innertext.style.top = valueTop + "%";
+  } else if (valueTop < 25) {
+    innertext.style.opacity = 1000 - value;
   } else {
     innertext.style.position = "fixed";
   }
 });
 
 // une fois que au scroll le background arrive à 100vh alors on reprends la div projets et on fixe le titre en haut de la page
-let root = document.querySelector(":root");
-let portrait = document.getElementById("portrait");
-window.addEventListener("scroll", function () {
-  let coordinates = portrait.getBoundingClientRect();
-  //   console.log(
-  //     "coordinate y : ",
-  //     coordinates.y,
-  //     "coordinate x : ",
-  //     coordinates.x
-  //   );
-  let valueYScroll = window.scrollY;
-  let topcoord = coordinates.y + valueYScroll;
-  var root = document.querySelector(":root");
-  root.style.setProperty("--coordinateY", topcoord);
-  // root.style.setProperty('--coordinateX', leftcoord)
-});
+// let root = document.querySelector(":root");
+// let portrait = document.getElementById("portrait");
+// window.addEventListener("scroll", function () {
+//   let coordinates = portrait.getBoundingClientRect();
+//   //   console.log(
+//   //     "coordinate y : ",
+//   //     coordinates.y,
+//   //     "coordinate x : ",
+//   //     coordinates.x
+//   //   );
+//   let valueYScroll = window.scrollY;
+//   let topcoord = coordinates.y + valueYScroll;
+//   var root = document.querySelector(":root");
+//   // root.style.setProperty("--coordinateY", topcoord);
+//   // root.style.setProperty('--coordinateX', leftcoord)
+// });
 
 // ANIMATION PROJECT CARD
 
-const projects = document.querySelectorAll("section");
-window.onscroll = () => {
+// const projects = document.querySelectorAll("section");
+// window.onscroll = () => {
+//   projects.forEach((project) => {
+//     let top = window.scrollY;
+//     let offset = project.offsetTop - 100;
+//     let height = project.offsetHeight;
+//     console.log("top", top, "offset", offset, "height", height);
+//     if (top >= offset && top < offset + height) {
+//       project.classList.add("show-animate");
+//     } else {
+//       project.classList.remove("show-animate");
+//     }
+//   });
+// };
+
+// ANIMATION PROJECT ON SCROLL
+const projects = document.querySelectorAll(".project");
+window.addEventListener("scroll", loadprojects);
+
+function loadprojects() {
+  const triggerbottom = (window.innerHeight / 5) * 4;
   projects.forEach((project) => {
-    let top = window.scrollY;
-    let offset = project.offsetTop - 100;
-    let height = project.offsetHeight;
-    console.log("top", top, "offset", offset, "height", height);
-    if (top >= offset && top < offset + height) {
-      project.classList.add("show-animate");
-    } else {
-      project.classList.remove("show-animate");
+    const projectTop = project.getBoundingClientRect().top;
+
+    if (projectTop < triggerbottom) {
+      project.classList.add("show");
     }
   });
-};
+}
