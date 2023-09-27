@@ -1,5 +1,6 @@
 // Ligne sous le menu au scroll
 window.addEventListener("scroll", shade);
+window.addEventListener("scroll",hideArrow)
 
 function shade() {
   if (window.scrollY > 50) {
@@ -9,7 +10,16 @@ function shade() {
     header.style.boxShadow = "";
   }
 }
-
+function hideArrow() {
+  let value = window.scrollY;
+  if (value < 70) {
+    let arrow = document.getElementById("arrow");
+    arrow.style.opacity= "1"
+  } else {
+    console.log("1-value/1000 : ",1-value/1000)
+    arrow.style.opacity=0.6-value/1000
+  }
+}
 // Souligner l'onglet actif du menu
 
 let onglets = document.querySelectorAll(".onglet");
@@ -99,18 +109,17 @@ let work_title = document.getElementById("work_title");
 let innertext = document.getElementById("innertext");
 window.addEventListener("scroll", function () {
   let value = window.scrollY;
-  work_title.style.clipPath = "circle(" + value + "px at center center)";
+  work_title.style.clipPath = "circle(" + value + "px at center 85vh)";
   let valueLeft = 100 - value / 5;
   let valueTop = 100 - value / 8;
   work_title.style.background =
     "linear-gradient(180deg, #FF5218 50%, #F0E7EE 100%)";
-
   console.log("innertext.style.top", valueTop);
   console.log("VALUE", value);
-  if (valueTop > 20) {
+  if (valueTop > 25) {
     innertext.style.left = valueLeft + "%";
     innertext.style.top = valueTop + "%";
-  } else if (valueTop < 25) {
+  } else if (valueTop < 0) {
     innertext.style.opacity = 1000 - value;
   } else {
     innertext.style.position = "fixed";

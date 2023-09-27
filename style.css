@@ -176,6 +176,7 @@ header a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .arrow:after {
     content: " ";
@@ -205,14 +206,14 @@ header a:hover{
     box-shadow: #493D5F 0px 2px 2px 0px;
     color: white;
     cursor: pointer;
-    border: none;
+    border: #493D5F solid 2px;
 }
 .btn_violet:hover{
     background-color: #FF5218;
     border-radius: 4px;
     box-shadow: #493D5F 0px 2px 4px 0px;
     color: white;
-    border: none;
+    border: #FF5218 2px solid;
 }
 
 .btn_violet a{
@@ -235,7 +236,7 @@ header a:hover{
     border-radius: 4px;
     box-shadow: #493D5F 0px 2px 2px 0px;
     color: #493D5F; 
-    border: #493D5F solid 2px;
+    border:2px #493D5F solid ;
     cursor: pointer;
 }
 
@@ -455,7 +456,7 @@ flex-direction: row-reverse;
     border-radius: 4px;
     box-shadow: #493D5F 0px 2px 4px 0px;
     color: white;
-    border: none;
+    border: #FF5218 2px solid;
 }
 #form #name, #email, #message{
     padding: 10px;
@@ -548,5 +549,11 @@ flex-direction: row-reverse;
     #form #name, #email, #message{
         width : 80%;
     }
+
+}
+@media only screen and (min-width : 1600px){
+.work_title{
+    clip-path: "circle(" + value + "px at center 85vh)";
+}
 
 }
