@@ -387,8 +387,7 @@ svg{
 
 .project:nth-of-type(even){
     transform: translateX(-200%);
-    /* justify-content: right; */
-flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 .project.show{
     transform: translateX(0);
