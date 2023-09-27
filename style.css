@@ -379,6 +379,7 @@ svg{
     display: flex;
     align-items: center;
     flex-direction: row;
+    justify-content: space-around;
     /* padding-left: 5%; */
     transform: translateX(200%);
     transition: transform 0.6s ease-in-out;
@@ -386,6 +387,8 @@ svg{
 
 .project:nth-of-type(even){
     transform: translateX(-200%);
+    /* justify-content: right; */
+flex-direction: row-reverse;
 }
 .project.show{
     transform: translateX(0);
